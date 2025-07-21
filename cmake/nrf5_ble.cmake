@@ -187,13 +187,9 @@ target_include_directories(nrf5_ble_db_discovery PUBLIC
 target_link_libraries(nrf5_ble_db_discovery PUBLIC
   nrf5_ble_common
   nrf5_log
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  
-  target_link_libraries(nrf5_ble_db_discovery PUBLIC
-    nrf5_ble_gq
-  )
-endif()
+
 list(APPEND NRF5_LIBRARY_NRF5_BLE_DB_DISCOVERY_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -230,12 +226,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_DB_DISCOVERY_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_DB_DISCOVERY_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE GATT
 add_library(nrf5_ble_gatt OBJECT EXCLUDE_FROM_ALL
@@ -382,58 +374,54 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_LINK_CTX_MANAGER_DEPENDENCIES
 )
 
 # BLE GATT Queue library
-if(NRF5_SDK_VERSION VERSION_GREATER_EQUAL 16.0.0)
-  add_library(nrf5_ble_gq OBJECT EXCLUDE_FROM_ALL
-    "${NRF5_SDK_PATH}/components/ble/nrf_ble_gq/nrf_ble_gq.c"
-  )
-  target_include_directories(nrf5_ble_gq PUBLIC
-    "${NRF5_SDK_PATH}/components/ble/nrf_ble_gq"
-  )
-  target_link_libraries(nrf5_ble_gq PUBLIC
-    nrf5_ble_common
-    nrf5_memobj
-    nrf5_queue
-  )
-  if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-    list(APPEND NRF5_LIBRARY_NRF5_BLE_GQ_DEPENDENCIES
-      nrf5_app_error
-      nrf5_app_scheduler
-      nrf5_app_timer_fwd
-      nrf5_app_util_platform
-      nrf5_atfifo
-      nrf5_atflags
-      nrf5_atomic
-      nrf5_balloc
-      nrf5_balloc_fwd
-      nrf5_ble_common
-      nrf5_ble_gq
-      nrf5_cli
-      nrf5_cli_fwd
-      nrf5_config
-      nrf5_crc16
-      nrf5_delay
-      nrf5_ext_fprintf
-      nrf5_fds
-      nrf5_fstorage
-      nrf5_log
-      nrf5_log_fwd
-      nrf5_mdk
-      nrf5_memobj
-      nrf5_memobj_fwd
-      nrf5_mtx
-      nrf5_nrfx_common
-      nrf5_nrfx_hal
-      nrf5_pwr_mgmt
-      nrf5_queue
-      nrf5_ringbuf
-      nrf5_sdh
-      nrf5_section
-      nrf5_soc
-      nrf5_sortlist
-      nrf5_strerror
-    )
-  endif()
-endif()
+add_library(nrf5_ble_gq OBJECT EXCLUDE_FROM_ALL
+  "${NRF5_SDK_PATH}/components/ble/nrf_ble_gq/nrf_ble_gq.c"
+)
+target_include_directories(nrf5_ble_gq PUBLIC
+  "${NRF5_SDK_PATH}/components/ble/nrf_ble_gq"
+)
+target_link_libraries(nrf5_ble_gq PUBLIC
+  nrf5_ble_common
+  nrf5_memobj
+  nrf5_queue
+)
+list(APPEND NRF5_LIBRARY_NRF5_BLE_GQ_DEPENDENCIES
+  nrf5_app_error
+  nrf5_app_scheduler
+  nrf5_app_timer_fwd
+  nrf5_app_util_platform
+  nrf5_atfifo
+  nrf5_atflags
+  nrf5_atomic
+  nrf5_balloc
+  nrf5_balloc_fwd
+  nrf5_ble_common
+  nrf5_ble_gq
+  nrf5_cli
+  nrf5_cli_fwd
+  nrf5_config
+  nrf5_crc16
+  nrf5_delay
+  nrf5_ext_fprintf
+  nrf5_fds
+  nrf5_fstorage
+  nrf5_log
+  nrf5_log_fwd
+  nrf5_mdk
+  nrf5_memobj
+  nrf5_memobj_fwd
+  nrf5_mtx
+  nrf5_nrfx_common
+  nrf5_nrfx_hal
+  nrf5_pwr_mgmt
+  nrf5_queue
+  nrf5_ringbuf
+  nrf5_sdh
+  nrf5_section
+  nrf5_soc
+  nrf5_sortlist
+  nrf5_strerror
+)
 
 # BLE Record Access Control Point library
 add_library(nrf5_ble_racp OBJECT EXCLUDE_FROM_ALL

@@ -92,11 +92,6 @@ installed globally is used.
 Specifies a path to the nRF5 SDK, which should be used during compilation. Root
 directory should include folders like `examples`, `components` etc.
 
-### `NRF5_SDK_VERSION` (version string, optional)
-
-You can explicily specify SDK version (e.g. `"16.0.0"`). When this cached
-variable is not provided, version is deduced from the SDK file contents.
-
 ### `NRF5_BOARD` (board name, optional)
 
 If you are using the nRF board you can specify it (e.g. `"pca10056"`) and the

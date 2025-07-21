@@ -121,12 +121,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LBS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LBS_C_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Nordic UART Service (Peripheral)
 add_library(nrf5_ble_srv_nus OBJECT EXCLUDE_FROM_ALL
@@ -226,12 +222,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_NUS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_NUS_C_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Device Information Service (Peripheral)
 add_library(nrf5_ble_srv_dis OBJECT EXCLUDE_FROM_ALL
@@ -528,12 +520,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_IAS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_IAS_C_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE GATT Service Server (Central)
 add_library(nrf5_ble_srv_gatts_c OBJECT EXCLUDE_FROM_ALL
@@ -582,12 +570,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GATTS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GATTS_C_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Current Time Service Client (Central)
 add_library(nrf5_ble_srv_cts_c OBJECT EXCLUDE_FROM_ALL
@@ -636,12 +620,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CTS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CTS_C_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Alert Notification Client (Central)
 add_library(nrf5_ble_srv_ans_c OBJECT EXCLUDE_FROM_ALL
@@ -690,12 +670,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANS_C_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Running Speed and Cadence Service (Peripheral)
 add_library(nrf5_ble_srv_rscs OBJECT EXCLUDE_FROM_ALL
@@ -852,13 +828,9 @@ target_include_directories(nrf5_ble_srv_hts PUBLIC
 )
 target_link_libraries(nrf5_ble_srv_hts PUBLIC
   nrf5_ble_common
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  
-  target_link_libraries(nrf5_ble_srv_hts PUBLIC
-    nrf5_ble_gq
-  )
-endif()
+
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_HTS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -895,12 +867,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_HTS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_HTS_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Blood Pressure Service (Peripheral)
 add_library(nrf5_ble_srv_bps OBJECT EXCLUDE_FROM_ALL
@@ -911,13 +879,8 @@ target_include_directories(nrf5_ble_srv_bps PUBLIC
 )
 target_link_libraries(nrf5_ble_srv_bps PUBLIC
   nrf5_ble_common
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  
-  target_link_libraries(nrf5_ble_srv_bps PUBLIC
-    nrf5_ble_gq
-  )
-endif()
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_BPS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -954,12 +917,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_BPS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_BPS_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Cycling Speed and Cadence Service
 add_library(nrf5_ble_srv_cscs OBJECT EXCLUDE_FROM_ALL
@@ -1021,13 +980,8 @@ target_include_directories(nrf5_ble_srv_lns PUBLIC
 )
 target_link_libraries(nrf5_ble_srv_lns PUBLIC
   nrf5_ble_common
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  
-  target_link_libraries(nrf5_ble_srv_lns PUBLIC
-    nrf5_ble_gq
-  )
-endif()
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LNS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -1064,12 +1018,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LNS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LNS_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Heart Rate Service (Peripheral)
 add_library(nrf5_ble_srv_hrs OBJECT EXCLUDE_FROM_ALL
@@ -1180,13 +1130,9 @@ target_include_directories(nrf5_ble_srv_gls PUBLIC
 target_link_libraries(nrf5_ble_srv_gls PUBLIC
   nrf5_ble_common
   nrf5_ble_racp
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  
-  target_link_libraries(nrf5_ble_srv_gls PUBLIC
-    nrf5_ble_gq
-  )
-endif()
+
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GLS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -1224,12 +1170,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GLS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GLS_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Apple Notification Center Service
 add_library(nrf5_ble_srv_ancs_c OBJECT EXCLUDE_FROM_ALL
@@ -1242,18 +1184,8 @@ target_include_directories(nrf5_ble_srv_ancs_c PUBLIC
 )
 target_link_libraries(nrf5_ble_srv_ancs_c PUBLIC
   nrf5_ble_db_discovery
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 15.3.0)
-  target_sources(nrf5_ble_srv_ancs_c PRIVATE
-    "${NRF5_SDK_PATH}/components/ble/ble_services/ble_ancs_c/ancs_tx_buffer.c"
-  )
-endif()
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  
-  target_link_libraries(nrf5_ble_srv_ancs_c PUBLIC
-    nrf5_ble_gq
-  )
-endif()
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANCS_C_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -1291,12 +1223,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANCS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANCS_C_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Object Transfer Service
 add_library(nrf5_ble_srv_ots OBJECT EXCLUDE_FROM_ALL
@@ -1312,18 +1240,9 @@ target_link_libraries(nrf5_ble_srv_ots PUBLIC
   nrf5_ble_common
   nrf5_crc32
   nrf5_fds
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 15.3.0)
-  target_sources(nrf5_ble_srv_ots PRIVATE
-    "${NRF5_SDK_PATH}/components/ble/ble_services/experimental_ble_ots/ble_hvx_buffering.c"
-  )
-endif()
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  
-  target_link_libraries(nrf5_ble_srv_ots PUBLIC
-    nrf5_ble_gq
-  )
-endif()
+
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_OTS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -1361,12 +1280,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_OTS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_OTS_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Continuous Glucose Monitoring Service
 add_library(nrf5_ble_srv_cgms OBJECT EXCLUDE_FROM_ALL
@@ -1383,13 +1298,9 @@ target_include_directories(nrf5_ble_srv_cgms PUBLIC
 target_link_libraries(nrf5_ble_srv_cgms PUBLIC
   nrf5_ble_common
   nrf5_ble_racp
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  
-  target_link_libraries(nrf5_ble_srv_cgms PUBLIC
-    nrf5_ble_gq
-  )
-endif()
+
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CGMS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -1427,12 +1338,8 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CGMS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CGMS_DEPENDENCIES
-    nrf5_ble_gq
-  )
-endif()
 
 # BLE Eddystone library
 add_library(nrf5_ble_srv_eddystone OBJECT EXCLUDE_FROM_ALL

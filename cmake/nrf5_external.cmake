@@ -163,14 +163,12 @@ target_compile_options(nrf5_ext_optiga PUBLIC
 target_compile_options(nrf5_ext_optiga PUBLIC
   "$<$<COMPILE_LANGUAGE:ASM>:-DDL_MAX_FRAME_SIZE=250>"
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  target_sources(nrf5_ext_optiga PRIVATE
-    "${NRF5_SDK_PATH}/external/infineon/examples/ecdsa_utils/ecdsa_utils.c"
-  )
-  target_include_directories(nrf5_ext_optiga PUBLIC
-    "${NRF5_SDK_PATH}/external/infineon/examples/ecdsa_utils"
-  )
-endif()
+target_sources(nrf5_ext_optiga PRIVATE
+  "${NRF5_SDK_PATH}/external/infineon/examples/ecdsa_utils/ecdsa_utils.c"
+)
+target_include_directories(nrf5_ext_optiga PUBLIC
+  "${NRF5_SDK_PATH}/external/infineon/examples/ecdsa_utils"
+)
 list(APPEND NRF5_LIBRARY_NRF5_EXT_OPTIGA_DEPENDENCIES
   nrf5_app_scheduler
   nrf5_app_util_platform

@@ -215,18 +215,10 @@ target_link_libraries(nrf5_app_timer_v2 PUBLIC
 target_compile_options(nrf5_app_timer_v2 PUBLIC
   "$<$<OR:$<COMPILE_LANGUAGE:CXX>,$<COMPILE_LANGUAGE:C>>:-DAPP_TIMER_V2>"
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 15.3.0)
-  target_sources(nrf5_app_timer_v2 PRIVATE
-    "${NRF5_SDK_PATH}/components/libraries/timer/experimental/app_timer2.c"
-    "${NRF5_SDK_PATH}/components/libraries/timer/experimental/drv_rtc.c"
-  )
-endif()
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  target_sources(nrf5_app_timer_v2 PRIVATE
-    "${NRF5_SDK_PATH}/components/libraries/timer/app_timer2.c"
-    "${NRF5_SDK_PATH}/components/libraries/timer/drv_rtc.c"
-  )
-endif()
+target_sources(nrf5_app_timer_v2 PRIVATE
+  "${NRF5_SDK_PATH}/components/libraries/timer/app_timer2.c"
+  "${NRF5_SDK_PATH}/components/libraries/timer/drv_rtc.c"
+)
 list(APPEND NRF5_LIBRARY_NRF5_APP_TIMER_V2_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
