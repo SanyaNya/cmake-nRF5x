@@ -24,7 +24,7 @@ include("nrf5_utils")
 include("nrf5_helpers")
 
 # Check nRF SDK
-set(NRF5_SDK_PATH "" CACHE PATH "Path to the nRF5 SDK")
+set(NRF5_SDK_PATH "${CMAKE_CURRENT_LIST_DIR}/../nrf5-sdk" CACHE PATH "Path to the nRF5 SDK")
 
 if(NOT NRF5_SDK_PATH)
   message(FATAL_ERROR "Path to the nRF5 SDK not provided. Please set NRF5_SDK_PATH cache variable.")
