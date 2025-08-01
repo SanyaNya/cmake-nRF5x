@@ -52,10 +52,6 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
   nrf5_ble_db_discovery
   nrf5_ble_gatt
   nrf5_ble_srv_nus_c
+  nrf5_ble_gq
+  nrf5_queue
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
-    nrf5_ble_gq
-    nrf5_queue
-  )
-endif()

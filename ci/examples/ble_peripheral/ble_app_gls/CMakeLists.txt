@@ -111,9 +111,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
   nrf5_sensorsim
   nrf5_sortlist
   nrf5_strerror
+  nrf5_ble_gq
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
-    nrf5_ble_gq
-  )
-endif()
