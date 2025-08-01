@@ -248,6 +248,7 @@
       "external/mbedtls/library/pkparse.c",
       "external/mbedtls/library/pkwrite.c",
       "external/mbedtls/library/platform.c",
+      "external/mbedtls/library/platform_util.c",
       "external/mbedtls/library/ripemd160.c",
       "external/mbedtls/library/rsa.c",
       "external/mbedtls/library/sha1.c",
