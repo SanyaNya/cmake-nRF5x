@@ -132,6 +132,7 @@ list(APPEND NRF5_LIBRARY_NRF5_EXT_OPTIGA_FWD_DEPENDENCIES
 
 # Optiga library
 add_library(nrf5_ext_optiga OBJECT EXCLUDE_FROM_ALL
+  "${NRF5_SDK_PATH}/external/infineon/examples/ecdsa_utils/ecdsa_utils.c"
   "${NRF5_SDK_PATH}/external/infineon/optiga/cmd/CommandLib.c"
   "${NRF5_SDK_PATH}/external/infineon/optiga/common/Logger.c"
   "${NRF5_SDK_PATH}/external/infineon/optiga/common/Util.c"
@@ -149,6 +150,9 @@ add_library(nrf5_ext_optiga OBJECT EXCLUDE_FROM_ALL
   "${NRF5_SDK_PATH}/external/infineon/pal/nrf5x/pal_os.c"
   "${NRF5_SDK_PATH}/external/infineon/pal/nrf5x/pal_os_lock.c"
 )
+target_include_directories(nrf5_ext_optiga PUBLIC
+  "${NRF5_SDK_PATH}/external/infineon/examples/ecdsa_utils"
+)
 target_link_libraries(nrf5_ext_optiga PUBLIC
   nrf5_boards
   nrf5_drv_rtc
@@ -162,12 +166,6 @@ target_compile_options(nrf5_ext_optiga PUBLIC
 )
 target_compile_options(nrf5_ext_optiga PUBLIC
   "$<$<COMPILE_LANGUAGE:ASM>:-DDL_MAX_FRAME_SIZE=250>"
-)
-target_sources(nrf5_ext_optiga PRIVATE
-  "${NRF5_SDK_PATH}/external/infineon/examples/ecdsa_utils/ecdsa_utils.c"
-)
-target_include_directories(nrf5_ext_optiga PUBLIC
-  "${NRF5_SDK_PATH}/external/infineon/examples/ecdsa_utils"
 )
 list(APPEND NRF5_LIBRARY_NRF5_EXT_OPTIGA_DEPENDENCIES
   nrf5_app_scheduler

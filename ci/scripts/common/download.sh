@@ -38,7 +38,7 @@ function merge_folders_inside() {
 # 2) Path of a downloaded file.
 function download_sdk() {
     # Location where binary files are placed.
-    local nrf5_base_url="https://www.nordicsemi.com/-/media/Software-and-other-downloads/SDKs/nRF5/Binaries"
+    local nrf5_base_url="https://files.nordicsemi.com/artifactory/nRF5-SDK/external/nRF5_SDK_v17.x.x"
 
     # Expected two args
     if [[ $# != 2 ]]; then
@@ -55,8 +55,7 @@ function download_sdk() {
 
     # Get proper suffix for SDK version.
     case $1 in
-        "15.3.0") local nrf_suffix="nRF5SDK153059ac345.zip";;
-        "16.0.0") local nrf_suffix="nRF5SDK160098a08e2.zip";;
+        "17.1.1") local nrf_suffix="nRF5_SDK_17.1.1_8173c8a.zip";;
         *) echo "nRF5 SDK $1 not supported!" && return 1;;
     esac
 
@@ -171,13 +170,13 @@ function download_nrf_tools() {
     case $OSTYPE in
         darwin*) {
             echo "Downloading nRF Tools for Mac OS..."
-            local nrf_tools_url="https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/10-7-0/nRF-Command-Line-Tools_10_7_0_OSX.tar"
+            local nrf_tools_url="https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/desktop-software/nrf-command-line-tools/sw/versions-10-x-x/10-7-0/nrf-command-line-tools_10_7_0_osx.tar"
             local file_type="tar"
             local file_variant="mac"
         };;
         linux-gnu) {
             echo "Downloading nRF Tools for Linux..."
-            local nrf_tools_url="https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/10-7-0/nRFCommandLineTools1070Linuxamd64tar.gz"
+            local nrf_tools_url="https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/desktop-software/nrf-command-line-tools/sw/versions-10-x-x/10-7-0/nrfcommandlinetools1070linuxamd64.tar.gz"
             local file_type="tar.gz"
             local file_variant="linux"
         };;

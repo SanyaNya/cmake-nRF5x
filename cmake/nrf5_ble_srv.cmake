@@ -96,6 +96,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LBS_C_DEPENDENCIES
   nrf5_balloc_fwd
   nrf5_ble_common
   nrf5_ble_db_discovery
+  nrf5_ble_gq
   nrf5_ble_srv_lbs_c
   nrf5_cli
   nrf5_cli_fwd
@@ -121,7 +122,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LBS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Nordic UART Service (Peripheral)
@@ -197,6 +197,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_NUS_C_DEPENDENCIES
   nrf5_balloc_fwd
   nrf5_ble_common
   nrf5_ble_db_discovery
+  nrf5_ble_gq
   nrf5_ble_srv_nus_c
   nrf5_cli
   nrf5_cli_fwd
@@ -222,7 +223,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_NUS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Device Information Service (Peripheral)
@@ -495,6 +495,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_IAS_C_DEPENDENCIES
   nrf5_balloc_fwd
   nrf5_ble_common
   nrf5_ble_db_discovery
+  nrf5_ble_gq
   nrf5_ble_srv_ias_c
   nrf5_cli
   nrf5_cli_fwd
@@ -520,7 +521,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_IAS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE GATT Service Server (Central)
@@ -545,6 +545,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GATTS_C_DEPENDENCIES
   nrf5_balloc_fwd
   nrf5_ble_common
   nrf5_ble_db_discovery
+  nrf5_ble_gq
   nrf5_ble_srv_gatts_c
   nrf5_cli
   nrf5_cli_fwd
@@ -570,7 +571,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GATTS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Current Time Service Client (Central)
@@ -595,6 +595,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CTS_C_DEPENDENCIES
   nrf5_balloc_fwd
   nrf5_ble_common
   nrf5_ble_db_discovery
+  nrf5_ble_gq
   nrf5_ble_srv_cts_c
   nrf5_cli
   nrf5_cli_fwd
@@ -620,7 +621,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CTS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Alert Notification Client (Central)
@@ -645,6 +645,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANS_C_DEPENDENCIES
   nrf5_balloc_fwd
   nrf5_ble_common
   nrf5_ble_db_discovery
+  nrf5_ble_gq
   nrf5_ble_srv_ans_c
   nrf5_cli
   nrf5_cli_fwd
@@ -670,7 +671,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Running Speed and Cadence Service (Peripheral)
@@ -830,7 +830,6 @@ target_link_libraries(nrf5_ble_srv_hts PUBLIC
   nrf5_ble_common
   nrf5_ble_gq
 )
-
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_HTS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -842,6 +841,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_HTS_DEPENDENCIES
   nrf5_balloc
   nrf5_balloc_fwd
   nrf5_ble_common
+  nrf5_ble_gq
   nrf5_ble_srv_hts
   nrf5_cli
   nrf5_cli_fwd
@@ -867,7 +867,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_HTS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Blood Pressure Service (Peripheral)
@@ -892,6 +891,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_BPS_DEPENDENCIES
   nrf5_balloc
   nrf5_balloc_fwd
   nrf5_ble_common
+  nrf5_ble_gq
   nrf5_ble_srv_bps
   nrf5_cli
   nrf5_cli_fwd
@@ -917,7 +917,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_BPS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Cycling Speed and Cadence Service
@@ -993,6 +992,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LNS_DEPENDENCIES
   nrf5_balloc
   nrf5_balloc_fwd
   nrf5_ble_common
+  nrf5_ble_gq
   nrf5_ble_srv_lns
   nrf5_cli
   nrf5_cli_fwd
@@ -1018,7 +1018,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LNS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Heart Rate Service (Peripheral)
@@ -1129,10 +1128,9 @@ target_include_directories(nrf5_ble_srv_gls PUBLIC
 )
 target_link_libraries(nrf5_ble_srv_gls PUBLIC
   nrf5_ble_common
-  nrf5_ble_racp
   nrf5_ble_gq
+  nrf5_ble_racp
 )
-
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GLS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -1144,6 +1142,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GLS_DEPENDENCIES
   nrf5_balloc
   nrf5_balloc_fwd
   nrf5_ble_common
+  nrf5_ble_gq
   nrf5_ble_racp
   nrf5_ble_srv_gls
   nrf5_cli
@@ -1170,7 +1169,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GLS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Apple Notification Center Service
@@ -1198,6 +1196,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANCS_C_DEPENDENCIES
   nrf5_balloc_fwd
   nrf5_ble_common
   nrf5_ble_db_discovery
+  nrf5_ble_gq
   nrf5_ble_srv_ancs_c
   nrf5_cli
   nrf5_cli_fwd
@@ -1223,7 +1222,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANCS_C_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Object Transfer Service
@@ -1238,11 +1236,10 @@ target_include_directories(nrf5_ble_srv_ots PUBLIC
 )
 target_link_libraries(nrf5_ble_srv_ots PUBLIC
   nrf5_ble_common
+  nrf5_ble_gq
   nrf5_crc32
   nrf5_fds
-  nrf5_ble_gq
 )
-
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_OTS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -1254,6 +1251,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_OTS_DEPENDENCIES
   nrf5_balloc
   nrf5_balloc_fwd
   nrf5_ble_common
+  nrf5_ble_gq
   nrf5_ble_srv_ots
   nrf5_cli
   nrf5_cli_fwd
@@ -1280,7 +1278,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_OTS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Continuous Glucose Monitoring Service
@@ -1297,10 +1294,9 @@ target_include_directories(nrf5_ble_srv_cgms PUBLIC
 )
 target_link_libraries(nrf5_ble_srv_cgms PUBLIC
   nrf5_ble_common
-  nrf5_ble_racp
   nrf5_ble_gq
+  nrf5_ble_racp
 )
-
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CGMS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -1312,6 +1308,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CGMS_DEPENDENCIES
   nrf5_balloc
   nrf5_balloc_fwd
   nrf5_ble_common
+  nrf5_ble_gq
   nrf5_ble_racp
   nrf5_ble_srv_cgms
   nrf5_cli
@@ -1338,7 +1335,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CGMS_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE Eddystone library

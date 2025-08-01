@@ -12,7 +12,7 @@ source "${PYTHON_VENV_SCRIPT}"
 invoke_pip3 install -r "${PYTHON_DIR}/requirements.txt"
 
 # List of SDKs to download
-sdks=( "15.3.0" "16.0.0" )
+sdks=( "17.1.1" )
 
 for sdk in "${sdks[@]}"; do
     if [[ ! -d "$SDKS_DIR/$sdk" ]]; then

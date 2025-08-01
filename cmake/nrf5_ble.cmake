@@ -186,10 +186,9 @@ target_include_directories(nrf5_ble_db_discovery PUBLIC
 )
 target_link_libraries(nrf5_ble_db_discovery PUBLIC
   nrf5_ble_common
-  nrf5_log
   nrf5_ble_gq
+  nrf5_log
 )
-
 list(APPEND NRF5_LIBRARY_NRF5_BLE_DB_DISCOVERY_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
@@ -202,6 +201,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_DB_DISCOVERY_DEPENDENCIES
   nrf5_balloc_fwd
   nrf5_ble_common
   nrf5_ble_db_discovery
+  nrf5_ble_gq
   nrf5_cli
   nrf5_cli_fwd
   nrf5_config
@@ -226,7 +226,6 @@ list(APPEND NRF5_LIBRARY_NRF5_BLE_DB_DISCOVERY_DEPENDENCIES
   nrf5_soc
   nrf5_sortlist
   nrf5_strerror
-  nrf5_ble_gq
 )
 
 # BLE GATT

@@ -626,7 +626,6 @@ add_library(nrf5_crypto_optiga_backend OBJECT EXCLUDE_FROM_ALL
   "${NRF5_SDK_PATH}/components/libraries/crypto/backend/optiga/optiga_backend_ecdsa.c"
   "${NRF5_SDK_PATH}/components/libraries/crypto/backend/optiga/optiga_backend_init.c"
   "${NRF5_SDK_PATH}/components/libraries/crypto/backend/optiga/optiga_backend_rng.c"
-  "${NRF5_SDK_PATH}/components/libraries/crypto/backend/optiga/optiga_backend_utils.c"
 )
 target_include_directories(nrf5_crypto_optiga_backend PUBLIC
   "${NRF5_SDK_PATH}/components/libraries/crypto/backend/optiga"
@@ -639,7 +638,6 @@ target_link_libraries(nrf5_crypto_optiga_backend PUBLIC
   nrf5_mdk
   nrf5_soc
 )
-
 list(APPEND NRF5_LIBRARY_NRF5_CRYPTO_OPTIGA_BACKEND_DEPENDENCIES
   nrf5_app_scheduler
   nrf5_app_util_platform
