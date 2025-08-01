@@ -33,59 +33,6 @@ function merge_folders_inside() {
     done
 }
 
-# Downloads nRF5 SDK from the internet.
-# 1) nRF5 version in form "X.X.X"
-# 2) Path of a downloaded file.
-function download_sdk() {
-    # Location where binary files are placed.
-    local nrf5_base_url="https://files.nordicsemi.com/artifactory/nRF5-SDK/external/nRF5_SDK_v17.x.x"
-
-    # Expected two args
-    if [[ $# != 2 ]]; then
-        echo "Expected two arguments, SDK version and filepath."
-        return 1
-    fi
-
-    # Validate first verion arg.
-    local arg_regexp="[0-9]+\.[0-9]+.[0-9]+"
-    if [[ !($1 =~ $arg_regexp) ]]; then
-        echo "Expected nRF5 SDK version X.X.X, got: $1"
-        return 1
-    fi
-
-    # Get proper suffix for SDK version.
-    case $1 in
-        "17.1.1") local nrf_suffix="nRF5_SDK_17.1.1_8173c8a.zip";;
-        *) echo "nRF5 SDK $1 not supported!" && return 1;;
-    esac
-
-    # Prepare dirs.
-    mkdir -p "$2"
-
-    # Download file 
-    echo "Downloading nRF5 SDK $1..."
-    curl "$nrf5_base_url/$nrf_suffix" > "$2.zip" || {
-        echo "Failed to download nRF5 SDK $1"
-        return 1
-    }
-
-    # Unzip file to a folder
-    echo "Unzipping nRF SDK $1..."
-    unzip -q "$2.zip" "-d$2" || {
-        echo "Failed to unzip nRF5 SDK $1"
-        return 1
-    }
-
-    # Remove all top folders
-    merge_folders_inside "$2" || {
-        echo "Failed to merge folder $2"
-        return 1
-    }
-
-    # Remove zip file.
-    rm "$2.zip"
-}
-
 # Download ARM GCC toolchain.
 # 1) Directory where toolchain should be put.
 function download_gcc_toolchain() {
