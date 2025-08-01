@@ -109,6 +109,7 @@ static void sleep_mode_enter(void)
     APP_ERROR_CHECK(err_code);
 }
 
+uint16_t m_conn_handle;
 
 /**@brief Function for handling events from the BSP module.
  *

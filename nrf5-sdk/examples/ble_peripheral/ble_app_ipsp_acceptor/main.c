@@ -55,7 +55,6 @@
 #include "ble_advdata.h"
 #include "ble_srv_common.h"
 #include "ble_ipsp.h"
-#include "iot_common.h"
 #include "mem_manager.h"
 #include "sdk_config.h"
 #include "nrf_pwr_mgmt.h"
