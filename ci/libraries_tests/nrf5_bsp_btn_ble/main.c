@@ -1,9 +1,5 @@
 #include "bsp_btn_ble.h"
 
-void app_error_handler_bare(uint32_t error_code)
-{
-}
-
 void bsp_event_callback(bsp_event_t event)
 {
 }

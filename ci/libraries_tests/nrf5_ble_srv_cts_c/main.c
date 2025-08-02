@@ -1,9 +1,5 @@
 #include "ble_cts_c.h"
 
-void app_error_handler_bare(uint32_t error_code)
-{
-}
-
 int main()
 {
     ble_cts_c_t cts;

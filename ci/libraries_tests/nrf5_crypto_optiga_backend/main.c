@@ -2,10 +2,6 @@
 #include "nrf_crypto.h"
 #include "nrf_crypto_ecc.h"
 
-void app_error_handler_bare(uint32_t error_code)
-{
-}
-
 int main()
 {
     nrf_crypto_ecc_key_pair_generate_context_t context2;

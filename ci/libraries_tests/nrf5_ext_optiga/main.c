@@ -1,9 +1,5 @@
 #include "optiga/optiga_crypt.h"
 
-void app_error_handler_bare(uint32_t error_code)
-{
-}
-
 int main()
 {
     uint8_t random[] = {0x00};

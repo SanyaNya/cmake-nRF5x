@@ -1,9 +1,5 @@
 #include "nrf_ble_scan.h"
 
-void app_error_handler_bare(uint32_t error_code)
-{
-}
-
 void nrf_ble_scan_evt_handler(scan_evt_t const *p_scan_evt)
 {
 }
