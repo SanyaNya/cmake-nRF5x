@@ -217,6 +217,7 @@ target_link_libraries(nrf5_app_timer_v2 PUBLIC
 )
 target_compile_options(nrf5_app_timer_v2 PUBLIC
   "$<$<OR:$<COMPILE_LANGUAGE:CXX>,$<COMPILE_LANGUAGE:C>>:-DAPP_TIMER_V2>"
+  "$<$<OR:$<COMPILE_LANGUAGE:CXX>,$<COMPILE_LANGUAGE:C>>:-DAPP_TIMER_V2_RTC1_ENABLED>"
 )
 list(APPEND NRF5_LIBRARY_NRF5_APP_TIMER_V2_DEPENDENCIES
   nrf5_app_error

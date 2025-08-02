@@ -113,7 +113,8 @@
     },
     "cflags": {
       "public": [
-        "-DAPP_TIMER_V2"
+        "-DAPP_TIMER_V2",
+        "-DAPP_TIMER_V2_RTC1_ENABLED"
       ]
     },
     "patches": [
