@@ -31,8 +31,10 @@ include("nrf5")
 add_executable(${CMAKE_PROJECT_NAME} "main.c")
 nrf5_target(${CMAKE_PROJECT_NAME})
 target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_timer
+  nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
   nrf5_atflags
@@ -63,5 +65,6 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
   nrf5_sdh
   nrf5_section
   nrf5_soc
+  nrf5_sortlist
   nrf5_strerror
 )

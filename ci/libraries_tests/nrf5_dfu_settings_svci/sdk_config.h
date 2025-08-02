@@ -1191,7 +1191,7 @@
  
 
 #ifndef NRF_DFU_BLE_REQUIRES_BONDS
-#define NRF_DFU_BLE_REQUIRES_BONDS 0
+#define NRF_DFU_BLE_REQUIRES_BONDS 1
 #endif
 
 // </h> 

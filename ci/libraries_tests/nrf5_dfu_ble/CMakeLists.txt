@@ -21,6 +21,8 @@
 # SOFTWARE.
 #
 # WARNING: FILE GENERATED FROM ./ci/scripts/generate_cmake_tests.sh SCRIPT.
+# WARNING: This test contains custom patch to allow compilation. Please edit
+#          above script if there is a need to do it.
 
 cmake_minimum_required(VERSION 3.14)
 project(nrf5_dfu_ble_test LANGUAGES C ASM)
@@ -28,22 +30,13 @@ project(nrf5_dfu_ble_test LANGUAGES C ASM)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../../../cmake")
 include("nrf5")
 
-add_compile_definitions(
-  BLE_STACK_SUPPORT_REQD
-  NRF_DFU_DEBUG_VERSION
-  NRF_DFU_SETTINGS_VERSION=2
-  NRF_DFU_SVCI_ENABLED
-)
-
-add_executable(${CMAKE_PROJECT_NAME}
-  "main.c"
-  "dfu_public_key.c"
-)
+add_executable(${CMAKE_PROJECT_NAME} "main.c")
 nrf5_target(${CMAKE_PROJECT_NAME})
 target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
   nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_timer
+  nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_assert
   nrf5_atfifo
@@ -68,6 +61,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
   nrf5_dfu_req_handler
   nrf5_dfu_settings
   nrf5_dfu_settings_svci
+  nrf5_dfu_svci
   nrf5_dfu_transport
   nrf5_dfu_utils
   nrf5_dfu_validation
@@ -83,8 +77,6 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
   nrf5_ext_optiga_fwd
   nrf5_fds
   nrf5_fstorage
-  nrf5_fstorage_nvmc
-  nrf5_fstorage_sd
   nrf5_log
   nrf5_log_fwd
   nrf5_mdk
@@ -102,6 +94,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
   nrf5_section
   nrf5_sha256_fwd
   nrf5_soc
+  nrf5_sortlist
   nrf5_stack_info
   nrf5_strerror
   nrf5_svc

@@ -28,10 +28,6 @@ project(nrf5_app_timer_v2_test LANGUAGES C ASM)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../../../cmake")
 include("nrf5")
 
-add_compile_definitions(
-  APP_TIMER_V2_RTC1_ENABLED
-)
-
 add_executable(${CMAKE_PROJECT_NAME} "main.c")
 nrf5_target(${CMAKE_PROJECT_NAME})
 target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC

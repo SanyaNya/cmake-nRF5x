@@ -33,7 +33,17 @@ def generate_library_test(library_name: str, library: LibraryDescription, librar
         "nrf5_log_default_backends": {
             "nrf5_log_backend_uart",
             "nrf5_log_backend_serial"
-        }
+        },
+        "nrf5_bootloader": {"nrf5_crypto_cc310_bl_backend", "nrf5_fstorage_sd", "nrf5_fstorage_nvmc"},
+        "nrf5_dfu": {"nrf5_crypto_cc310_bl_backend", "nrf5_fstorage_sd", "nrf5_fstorage_nvmc"},
+        "nrf5_dfu_ble": {"nrf5_crypto_cc310_bl_backend"},
+        "nrf5_dfu_flash": {"nrf5_fstorage_sd", "nrf5_fstorage_nvmc"},
+        "nrf5_dfu_req_handler": {"nrf5_crypto_cc310_bl_backend", "nrf5_fstorage_sd", "nrf5_fstorage_nvmc"},
+        "nrf5_dfu_serial": {"nrf5_crypto_cc310_bl_backend"},
+        "nrf5_dfu_serial_uart": {"nrf5_crypto_cc310_bl_backend"},
+        "nrf5_dfu_serial_usb": {"nrf5_crypto_cc310_bl_backend"},
+        "nrf5_dfu_settings": {"nrf5_fstorage_sd", "nrf5_fstorage_nvmc"},
+        "nrf5_dfu_settings_svci": {"nrf5_fstorage_sd", "nrf5_fstorage_nvmc"}
     }
 
     if library_name in custom_patches:

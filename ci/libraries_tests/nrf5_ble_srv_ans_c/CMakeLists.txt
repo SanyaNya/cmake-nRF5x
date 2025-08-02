@@ -31,8 +31,10 @@ include("nrf5")
 add_executable(${CMAKE_PROJECT_NAME} "main.c")
 nrf5_target(${CMAKE_PROJECT_NAME})
 target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_timer
+  nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
   nrf5_atflags
@@ -41,6 +43,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
   nrf5_balloc_fwd
   nrf5_ble_common
   nrf5_ble_db_discovery
+  nrf5_ble_gq
   nrf5_ble_srv_ans_c
   nrf5_cli
   nrf5_cli_fwd
@@ -64,10 +67,6 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
   nrf5_sdh
   nrf5_section
   nrf5_soc
+  nrf5_sortlist
   nrf5_strerror
 )
-if(NRF5_SDK_VERSION VERSION_EQUAL 16.0.0)
-  target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
-    nrf5_ble_gq
-  )
-endif()

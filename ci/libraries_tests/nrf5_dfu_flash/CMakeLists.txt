@@ -21,6 +21,8 @@
 # SOFTWARE.
 #
 # WARNING: FILE GENERATED FROM ./ci/scripts/generate_cmake_tests.sh SCRIPT.
+# WARNING: This test contains custom patch to allow compilation. Please edit
+#          above script if there is a need to do it.
 
 cmake_minimum_required(VERSION 3.14)
 project(nrf5_dfu_flash_test LANGUAGES C ASM)
@@ -47,8 +49,8 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
   nrf5_ext_fprintf
   nrf5_fds
   nrf5_fstorage
-  nrf5_fstorage_sd
   nrf5_fstorage_nvmc
+  nrf5_fstorage_sd
   nrf5_log
   nrf5_log_fwd
   nrf5_mdk
@@ -65,5 +67,4 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
   nrf5_section
   nrf5_soc
   nrf5_strerror
-  nrf5_sdh
 )

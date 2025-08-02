@@ -28,10 +28,6 @@ project(nrf5_dfu_trigger_usb_test LANGUAGES C ASM)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../../../cmake")
 include("nrf5")
 
-add_compile_definitions(
-  BSP_SELF_PINRESET_PIN
-)
-
 add_executable(${CMAKE_PROJECT_NAME} "main.c")
 nrf5_target(${CMAKE_PROJECT_NAME})
 target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
