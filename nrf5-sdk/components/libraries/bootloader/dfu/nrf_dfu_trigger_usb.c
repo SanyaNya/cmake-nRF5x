@@ -51,7 +51,8 @@
 NRF_LOG_MODULE_REGISTER();
 
 #ifndef BSP_SELF_PINRESET_PIN
-#error "This module is intended to be used with boards that have the GP pin shortened with the RESET pin."
+#warning "This module is intended to be used with boards that have the GP pin shortened with the RESET pin. Defining BSP_SELF_PINRESET_PIN as 0"
+#define BSP_SELF_PINRESET_PIN 0
 #endif
 
 /**
