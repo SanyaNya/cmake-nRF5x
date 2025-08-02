@@ -192,6 +192,7 @@ target_link_libraries(nrf5_dfu_trigger_usb PUBLIC
   nrf5_nrfx_hal
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_TRIGGER_USB_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_usbd
   nrf5_app_usbd_nrf_dfu_trigger
@@ -1003,6 +1004,7 @@ target_link_libraries(nrf5_dfu_serial_usb PUBLIC
   nrf5_slip
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_SERIAL_USB_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_usbd
   nrf5_app_usbd_cdc_acm

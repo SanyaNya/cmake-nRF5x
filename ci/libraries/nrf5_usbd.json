@@ -12,7 +12,8 @@
         "nrf5_drv_usbd",
         "nrf5_drv_power",
         "nrf5_drv_clock",
-        "nrf5_ext_utf_converter"
+        "nrf5_ext_utf_converter",
+        "nrf5_app_error"
       ]
     },
     "includes": {

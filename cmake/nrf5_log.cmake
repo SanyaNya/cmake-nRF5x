@@ -180,6 +180,7 @@ target_link_libraries(nrf5_cli_cdc_acm PUBLIC
   nrf5_cli
 )
 list(APPEND NRF5_LIBRARY_NRF5_CLI_CDC_ACM_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_usbd
   nrf5_app_usbd_cdc_acm
