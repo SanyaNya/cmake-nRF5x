@@ -49,6 +49,7 @@ target_link_libraries(nrf5_dfu_flash PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_FLASH_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -94,6 +95,7 @@ target_link_libraries(nrf5_dfu_settings PUBLIC
   nrf5_nrfx_nvmc
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_SETTINGS_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -140,6 +142,7 @@ target_link_libraries(nrf5_dfu_settings_svci PUBLIC
   nrf5_dfu_settings
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_SETTINGS_SVCI_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -255,6 +258,7 @@ target_link_libraries(nrf5_dfu_ver_validation PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_VER_VALIDATION_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_assert
@@ -321,6 +325,7 @@ target_link_libraries(nrf5_dfu_utils PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_UTILS_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -379,6 +384,7 @@ target_link_libraries(nrf5_dfu_validation PUBLIC
   nrf5_strerror
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_VALIDATION_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_assert
@@ -442,6 +448,7 @@ target_link_libraries(nrf5_dfu_handling_error PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_HANDLING_ERROR_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -495,6 +502,7 @@ target_link_libraries(nrf5_dfu_req_handler PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_REQ_HANDLER_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_assert
@@ -560,6 +568,7 @@ target_link_libraries(nrf5_dfu_transport PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_TRANSPORT_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -604,6 +613,7 @@ target_link_libraries(nrf5_dfu_mbr PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_MBR_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -650,6 +660,7 @@ target_link_libraries(nrf5_dfu PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_assert
@@ -715,6 +726,7 @@ target_link_libraries(nrf5_dfu_svci PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_SVCI_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -846,6 +858,7 @@ target_link_libraries(nrf5_dfu_serial PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_SERIAL_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_assert
@@ -920,6 +933,7 @@ target_link_libraries(nrf5_dfu_serial_uart PUBLIC
   nrf5_slip
 )
 list(APPEND NRF5_LIBRARY_NRF5_DFU_SERIAL_UART_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_assert
@@ -1110,6 +1124,7 @@ target_link_libraries(nrf5_bootloader_dfu_timers PUBLIC
   nrf5_nrfx_hal
 )
 list(APPEND NRF5_LIBRARY_NRF5_BOOTLOADER_DFU_TIMERS_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1155,6 +1170,7 @@ target_link_libraries(nrf5_bootloader_wdt PUBLIC
   nrf5_nrfx_hal
 )
 list(APPEND NRF5_LIBRARY_NRF5_BOOTLOADER_WDT_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1204,6 +1220,7 @@ target_link_libraries(nrf5_bootloader_fw_activation PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_BOOTLOADER_FW_ACTIVATION_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1261,6 +1278,7 @@ target_link_libraries(nrf5_bootloader_app_start PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_BOOTLOADER_APP_START_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1318,6 +1336,7 @@ target_link_libraries(nrf5_bootloader PUBLIC
   nrf5_nrfx_hal
 )
 list(APPEND NRF5_LIBRARY_NRF5_BOOTLOADER_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_assert

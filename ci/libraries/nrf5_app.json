@@ -29,7 +29,12 @@
     ],
     "dependencies": {
       "public": [
-        "nrf5_log"
+        "nrf5_log_fwd",
+        "nrf5_config",
+        "nrf5_mdk",
+        "nrf5_strerror",
+        "nrf5_section",
+        "nrf5_memobj"
       ]
     },
     "includes": {

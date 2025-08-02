@@ -168,6 +168,7 @@ target_compile_options(nrf5_ext_optiga PUBLIC
   "$<$<COMPILE_LANGUAGE:ASM>:-DDL_MAX_FRAME_SIZE=250>"
 )
 list(APPEND NRF5_LIBRARY_NRF5_EXT_OPTIGA_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo

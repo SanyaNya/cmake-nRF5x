@@ -48,6 +48,7 @@ target_link_libraries(nrf5_gfx PUBLIC
   nrf5_nrfx_common
 )
 list(APPEND NRF5_LIBRARY_NRF5_GFX_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -94,6 +95,7 @@ target_link_libraries(nrf5_spi_mngr PUBLIC
   nrf5_queue
 )
 list(APPEND NRF5_LIBRARY_NRF5_SPI_MNGR_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -143,6 +145,7 @@ target_link_libraries(nrf5_twi_mngr PUBLIC
   nrf5_queue
 )
 list(APPEND NRF5_LIBRARY_NRF5_TWI_MNGR_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -189,6 +192,7 @@ target_link_libraries(nrf5_mpu PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_MPU_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -233,6 +237,7 @@ target_link_libraries(nrf5_stack_guard PUBLIC
   nrf5_mpu
 )
 list(APPEND NRF5_LIBRARY_NRF5_STACK_GUARD_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -292,6 +297,7 @@ target_link_libraries(nrf5_block_dev_empty PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_BLOCK_DEV_EMPTY_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -338,6 +344,7 @@ target_link_libraries(nrf5_block_dev_qspi PUBLIC
   nrf5_drv_qspi
 )
 list(APPEND NRF5_LIBRARY_NRF5_BLOCK_DEV_QSPI_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo
@@ -385,6 +392,7 @@ target_link_libraries(nrf5_block_dev_ram PUBLIC
   nrf5_log
 )
 list(APPEND NRF5_LIBRARY_NRF5_BLOCK_DEV_RAM_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_util_platform
   nrf5_atfifo

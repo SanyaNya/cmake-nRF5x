@@ -52,36 +52,26 @@ target_include_directories(nrf5_app_error PUBLIC
   "${NRF5_SDK_PATH}/components/libraries/util"
 )
 target_link_libraries(nrf5_app_error PUBLIC
-  nrf5_log
+  nrf5_config
+  nrf5_log_fwd
+  nrf5_mdk
+  nrf5_memobj
+  nrf5_section
+  nrf5_strerror
 )
 list(APPEND NRF5_LIBRARY_NRF5_APP_ERROR_DEPENDENCIES
   nrf5_app_error
-  nrf5_app_scheduler
-  nrf5_app_util_platform
-  nrf5_atfifo
   nrf5_atomic
   nrf5_balloc
   nrf5_balloc_fwd
-  nrf5_cli
   nrf5_cli_fwd
   nrf5_config
-  nrf5_crc16
-  nrf5_delay
   nrf5_ext_fprintf
-  nrf5_fds
-  nrf5_fstorage
-  nrf5_log
   nrf5_log_fwd
   nrf5_mdk
   nrf5_memobj
   nrf5_memobj_fwd
-  nrf5_mtx
-  nrf5_nrfx_common
-  nrf5_nrfx_hal
-  nrf5_pwr_mgmt
   nrf5_queue
-  nrf5_ringbuf
-  nrf5_sdh
   nrf5_section
   nrf5_soc
   nrf5_strerror
@@ -337,6 +327,7 @@ target_link_libraries(nrf5_app_uart PUBLIC
   nrf5_drv_uart
 )
 list(APPEND NRF5_LIBRARY_NRF5_APP_UART_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_uart
   nrf5_app_util_platform
@@ -386,6 +377,7 @@ target_link_libraries(nrf5_app_uart_fifo PUBLIC
   nrf5_drv_uart
 )
 list(APPEND NRF5_LIBRARY_NRF5_APP_UART_FIFO_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_fifo
   nrf5_app_scheduler
   nrf5_app_uart_fifo
@@ -439,6 +431,7 @@ target_link_libraries(nrf5_app_pwm PUBLIC
   nrf5_nrfx_hal
 )
 list(APPEND NRF5_LIBRARY_NRF5_APP_PWM_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_pwm
   nrf5_app_scheduler
   nrf5_app_util_platform
