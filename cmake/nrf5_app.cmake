@@ -264,13 +264,14 @@ target_include_directories(nrf5_app_button PUBLIC
   "${NRF5_SDK_PATH}/components/libraries/util"
 )
 target_link_libraries(nrf5_app_button PUBLIC
-  nrf5_app_timer_fwd
+  nrf5_app_timer
   nrf5_nrfx_gpiote
 )
 list(APPEND NRF5_LIBRARY_NRF5_APP_BUTTON_DEPENDENCIES
   nrf5_app_button
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo

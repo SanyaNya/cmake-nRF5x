@@ -149,7 +149,7 @@
     ],
     "dependencies": {
       "public": [
-        "nrf5_app_timer_fwd",
+        "nrf5_app_timer",
         "nrf5_nrfx_gpiote"
       ]
     },

@@ -77,6 +77,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BSP_DEPENDENCIES
   nrf5_app_button
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -126,6 +127,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BSP_BTN_BLE_DEPENDENCIES
   nrf5_app_button
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -176,6 +178,7 @@ list(APPEND NRF5_LIBRARY_NRF5_BSP_CLI_DEPENDENCIES
   nrf5_app_button
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
