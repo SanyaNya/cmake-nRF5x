@@ -51,6 +51,11 @@
       "public": [
         "components/libraries/bootloader/dfu"
       ]
+    },
+    "cflags": {
+      "public": [
+        "-DNRF_DFU_SETTINGS_VERSION=2"
+      ]
     }
   },
   "nrf5_dfu_settings_svci": {

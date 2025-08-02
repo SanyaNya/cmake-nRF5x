@@ -94,6 +94,9 @@ target_link_libraries(nrf5_dfu_settings PUBLIC
   nrf5_dfu_flash
   nrf5_nrfx_nvmc
 )
+target_compile_options(nrf5_dfu_settings PUBLIC
+  "$<$<OR:$<COMPILE_LANGUAGE:CXX>,$<COMPILE_LANGUAGE:C>>:-DNRF_DFU_SETTINGS_VERSION=2>"
+)
 list(APPEND NRF5_LIBRARY_NRF5_DFU_SETTINGS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
