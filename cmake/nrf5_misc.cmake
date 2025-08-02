@@ -430,6 +430,7 @@ target_link_libraries(nrf5_block_dev_sdc PUBLIC
   nrf5_block_dev
 )
 list(APPEND NRF5_LIBRARY_NRF5_BLOCK_DEV_SDC_DEPENDENCIES
+  nrf5_app_error
   nrf5_app_scheduler
   nrf5_app_sdcard
   nrf5_app_util_platform
