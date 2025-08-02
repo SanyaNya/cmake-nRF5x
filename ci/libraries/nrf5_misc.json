@@ -204,7 +204,7 @@
     ],
     "dependencies": {
       "public": [
-        "nrf5_app_timer_fwd"
+        "nrf5_app_timer"
       ]
     },
     "includes": {
@@ -221,7 +221,8 @@
     ],
     "dependencies": {
       "public": [
-        "nrf5_low_power_pwm"
+        "nrf5_low_power_pwm",
+        "nrf5_app_timer"
       ]
     },
     "includes": {

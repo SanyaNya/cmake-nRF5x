@@ -486,11 +486,12 @@ target_include_directories(nrf5_low_power_pwm PUBLIC
   "${NRF5_SDK_PATH}/components/libraries/low_power_pwm"
 )
 target_link_libraries(nrf5_low_power_pwm PUBLIC
-  nrf5_app_timer_fwd
+  nrf5_app_timer
 )
 list(APPEND NRF5_LIBRARY_NRF5_LOW_POWER_PWM_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -532,11 +533,13 @@ target_include_directories(nrf5_led_softblink PUBLIC
   "${NRF5_SDK_PATH}/components/libraries/led_softblink"
 )
 target_link_libraries(nrf5_led_softblink PUBLIC
+  nrf5_app_timer
   nrf5_low_power_pwm
 )
 list(APPEND NRF5_LIBRARY_NRF5_LED_SOFTBLINK_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
