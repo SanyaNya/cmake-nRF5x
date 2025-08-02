@@ -38,6 +38,7 @@ target_link_libraries(nrf5_ble_srv_lbs PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LBS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -87,6 +88,7 @@ target_link_libraries(nrf5_ble_srv_lbs_c PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LBS_C_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -138,6 +140,7 @@ target_link_libraries(nrf5_ble_srv_nus PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_NUS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -188,6 +191,7 @@ target_link_libraries(nrf5_ble_srv_nus_c PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_NUS_C_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -239,6 +243,7 @@ target_link_libraries(nrf5_ble_srv_dis PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_DIS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -289,6 +294,7 @@ target_link_libraries(nrf5_ble_srv_bms PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_BMS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -339,6 +345,7 @@ target_link_libraries(nrf5_ble_srv_ipsp PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_IPSP_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -388,6 +395,7 @@ target_link_libraries(nrf5_ble_srv_lls PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LLS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -437,6 +445,7 @@ target_link_libraries(nrf5_ble_srv_ias PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_IAS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -486,6 +495,7 @@ target_link_libraries(nrf5_ble_srv_ias_c PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_IAS_C_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -536,6 +546,7 @@ target_link_libraries(nrf5_ble_srv_gatts_c PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GATTS_C_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -586,6 +597,7 @@ target_link_libraries(nrf5_ble_srv_cts_c PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CTS_C_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -636,6 +648,7 @@ target_link_libraries(nrf5_ble_srv_ans_c PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANS_C_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -686,6 +699,7 @@ target_link_libraries(nrf5_ble_srv_rscs PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_RSCS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -735,6 +749,7 @@ target_link_libraries(nrf5_ble_srv_hids PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_HIDS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -784,6 +799,7 @@ target_link_libraries(nrf5_ble_srv_bas PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_BAS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -833,6 +849,7 @@ target_link_libraries(nrf5_ble_srv_hts PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_HTS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -883,6 +900,7 @@ target_link_libraries(nrf5_ble_srv_bps PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_BPS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -933,6 +951,7 @@ target_link_libraries(nrf5_ble_srv_cscs PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CSCS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -984,6 +1003,7 @@ target_link_libraries(nrf5_ble_srv_lns PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_LNS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1034,6 +1054,7 @@ target_link_libraries(nrf5_ble_srv_hrs PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_HRS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1083,6 +1104,7 @@ target_link_libraries(nrf5_ble_srv_tps PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_TPS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1134,6 +1156,7 @@ target_link_libraries(nrf5_ble_srv_gls PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_GLS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1187,6 +1210,7 @@ target_link_libraries(nrf5_ble_srv_ancs_c PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_ANCS_C_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1243,6 +1267,7 @@ target_link_libraries(nrf5_ble_srv_ots PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_OTS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1300,6 +1325,7 @@ target_link_libraries(nrf5_ble_srv_cgms PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_CGMS_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -1374,6 +1400,7 @@ target_link_libraries(nrf5_ble_srv_eddystone PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SRV_EDDYSTONE_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo

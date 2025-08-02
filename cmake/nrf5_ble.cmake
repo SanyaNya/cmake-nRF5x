@@ -34,7 +34,7 @@ target_include_directories(nrf5_ble_common PUBLIC
   "${NRF5_SDK_PATH}/components/libraries/util"
 )
 target_link_libraries(nrf5_ble_common PUBLIC
-  nrf5_app_timer_fwd
+  nrf5_app_timer
   nrf5_atflags
   nrf5_atomic
   nrf5_config
@@ -45,6 +45,7 @@ target_link_libraries(nrf5_ble_common PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_COMMON_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -93,6 +94,7 @@ target_link_libraries(nrf5_ble_advertising PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_ADVERTISING_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -142,6 +144,7 @@ target_link_libraries(nrf5_ble_scan PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SCAN_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -192,6 +195,7 @@ target_link_libraries(nrf5_ble_db_discovery PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_DB_DISCOVERY_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -289,6 +293,7 @@ target_link_libraries(nrf5_ble_qwr PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_QWR_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -337,6 +342,7 @@ target_link_libraries(nrf5_ble_link_ctx_manager PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_LINK_CTX_MANAGER_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -387,6 +393,7 @@ target_link_libraries(nrf5_ble_gq PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_GQ_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo

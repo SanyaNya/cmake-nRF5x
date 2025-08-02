@@ -97,6 +97,7 @@ target_link_libraries(nrf5_ble_peer_database PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_PEER_DATABASE_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -150,6 +151,7 @@ target_link_libraries(nrf5_ble_peer_data_storage PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_PEER_DATA_STORAGE_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -202,6 +204,7 @@ target_link_libraries(nrf5_ble_id_manager PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_ID_MANAGER_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -250,6 +253,7 @@ target_link_libraries(nrf5_ble_peer_id PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_PEER_ID_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -298,6 +302,7 @@ target_link_libraries(nrf5_ble_pm_buffer PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_PM_BUFFER_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -346,6 +351,7 @@ target_link_libraries(nrf5_ble_auth_status_tracker PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_AUTH_STATUS_TRACKER_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -396,6 +402,7 @@ target_link_libraries(nrf5_ble_security_dispatcher PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SECURITY_DISPATCHER_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -447,6 +454,7 @@ target_link_libraries(nrf5_ble_security_manager PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_SECURITY_MANAGER_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -500,6 +508,7 @@ target_link_libraries(nrf5_ble_gatt_cache_manager PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_GATT_CACHE_MANAGER_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -551,6 +560,7 @@ target_link_libraries(nrf5_ble_peer_manager_handler PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_PEER_MANAGER_HANDLER_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo
@@ -614,6 +624,7 @@ target_link_libraries(nrf5_ble_peer_manager PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_BLE_PEER_MANAGER_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_atfifo

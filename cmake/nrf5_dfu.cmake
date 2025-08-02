@@ -769,6 +769,7 @@ target_link_libraries(nrf5_dfu_ble PUBLIC
 list(APPEND NRF5_LIBRARY_NRF5_DFU_BLE_DEPENDENCIES
   nrf5_app_error
   nrf5_app_scheduler
+  nrf5_app_timer
   nrf5_app_timer_fwd
   nrf5_app_util_platform
   nrf5_assert
