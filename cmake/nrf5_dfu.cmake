@@ -775,7 +775,7 @@ target_link_libraries(nrf5_dfu_ble PUBLIC
   nrf5_dfu_handling_error
   nrf5_dfu_mbr
   nrf5_dfu_req_handler
-  nrf5_dfu_settings
+  nrf5_dfu_settings_svci
   nrf5_dfu_svci
   nrf5_dfu_transport
   nrf5_log
@@ -808,6 +808,7 @@ list(APPEND NRF5_LIBRARY_NRF5_DFU_BLE_DEPENDENCIES
   nrf5_dfu_mbr
   nrf5_dfu_req_handler
   nrf5_dfu_settings
+  nrf5_dfu_settings_svci
   nrf5_dfu_svci
   nrf5_dfu_transport
   nrf5_dfu_utils
