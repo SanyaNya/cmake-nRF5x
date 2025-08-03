@@ -10,7 +10,7 @@ source "${BASH_SOURCE%/*}/common/utils.sh"
 mkdir -p "$GENERATED_DIR"
 
 for sdk in `ls -d $SDKS_DIR/*`; do
-    files="$files $(find "${sdk}" -regex ".*/examples/.*/armgcc/Makefile")"
+    files="$files $(find -L "${sdk}" -regex ".*/examples/.*/armgcc/Makefile")"
 done
 
 echo "$files" | invoke_py3 "${PYTHON_DIR}/scrape_makefiles.py" --output "$GENERATED_EXAMPLES"
