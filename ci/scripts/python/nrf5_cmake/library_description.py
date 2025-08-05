@@ -14,6 +14,7 @@ class LibraryVariant(Enum):
     BUILTIN = "builtin"
     OBJECT = "object"
     INTERFACE = "interface"
+    STATIC = "static"
 
 
 class LibraryDescription:

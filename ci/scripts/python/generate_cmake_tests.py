@@ -72,7 +72,7 @@ def generate_library_test(library_name: str, library: LibraryDescription, librar
         "name": library_name,
         "custom_patch": custom_patch,
         "sdk_version": sdk_version,
-        "base": sorted(base_dependencies),
+        "base": sorted(base_dependencies) if library.variant == LibraryVariant.OBJECT else [library_name],
         "patches": {
             str(x[0]): sorted(set.difference(x[1], base_dependencies)) for x in sdk_dependencies.items()
         }
@@ -115,7 +115,7 @@ library_names = sorted(all_libraries.keys())
 for library_name in library_names:
     # Make sure that library is of object type.
     library = all_libraries[library_name]
-    if library.variant != LibraryVariant.OBJECT:
+    if library.variant != LibraryVariant.OBJECT and library.variant != LibraryVariant.STATIC:
         continue
 
     # Make sure that test directory exists for specific library.
