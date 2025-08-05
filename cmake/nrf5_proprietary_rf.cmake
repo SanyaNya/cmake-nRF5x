@@ -23,7 +23,7 @@
 # WARNING: FILE GENERATED FROM ./ci/scripts/generate_cmake.sh SCRIPT.
 
 # Enhanced ShockBurst (ESB)
-add_library(nrf5_esb OBJECT EXCLUDE_FROM_ALL
+add_library(nrf5_esb STATIC EXCLUDE_FROM_ALL
   "${NRF5_SDK_PATH}/components/proprietary_rf/esb/nrf_esb.c"
 )
 target_include_directories(nrf5_esb PUBLIC
