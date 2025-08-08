@@ -43,7 +43,7 @@ function(nrf5_validate_sdk_version sdk_version)
   endif()
 endfunction()
 
-function(nrf5_get_board_target board out_target out_define)
+function(nrf5_get_board_target board out_target out_define out_define_value)
   # Information about the board. In order:
   # * Board target
   # * Board define
@@ -72,17 +72,26 @@ function(nrf5_get_board_target board out_target out_define)
   set(board_n5dk1         nrf51422_xxaa BOARD_N5DK1)
   set(board_d52dk1        nrf52832_xxaa BOARD_D52DK1)
   set(board_arduinoprimo  nrf52832_xxaa BOARD_ARDUINO_PRIMO)
-  # TODO: Support for custom boards?
 
-  if(NOT board_${board})
-    message(FATAL_ERROR "Unsupported nRF board: ${board}")
+  if(board_${board})
+    list(GET board_${board} ${target_key} board_target)
+    set(${out_target} ${board_target} PARENT_SCOPE)
+
+    list(GET board_${board} ${define_key} board_define)
+    set(${out_define} ${board_define} PARENT_SCOPE)
+  else()
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${board}.h")
+      if(NRF5_TARGET)
+        set(${out_target} ${NRF5_TARGET} PARENT_SCOPE)
+        set(${out_define} CUSTOM_BOARD_INC PARENT_SCOPE)
+        set(${out_define_value} ${board} PARENT_SCOPE)
+      else()
+        message(FATAL_ERROR "NRF5_TARGET must be defined for custom board")
+      endif()
+    else()
+      message(FATAL_ERROR "Unsupported nRF board: ${board}")
+    endif()
   endif()
-
-  list(GET board_${board} ${target_key} board_target)
-  set(${out_target} ${board_target} PARENT_SCOPE)
-
-  list(GET board_${board} ${define_key} board_define)
-  set(${out_define} ${board_define} PARENT_SCOPE)
 endfunction()
 
 function(nrf5_get_target_flags target out_target out_target_short out_target_flags)

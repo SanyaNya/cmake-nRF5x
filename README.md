@@ -97,7 +97,9 @@ directory should include folders like `examples`, `components` etc.
 If you are using the nRF board you can specify it (e.g. `"pca10056"`) and the
 value of `NRF5_TARGET` will be deduced accordingly. If defined, all
 board-specific defines (like `-DBOARD_PCA10056`) are included for all source
-files during compilation.
+files during compilation. You also can set this variable to filepath of custom
+board include(without .h extension and relative to ${CMAKE_CURRENT_SOURCE_DIR})
+and it will be defined like -DCUSTOM_BOARD_INC=${NRF5_BOARD}
 
 ### `NRF5_TARGET` (target name, optional)
 
