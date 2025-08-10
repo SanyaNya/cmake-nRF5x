@@ -1,7 +1,7 @@
 {
   "nrf5_esb": {
     "documentation": "Enhanced ShockBurst (ESB)",
-    "variant": "static",
+    "variant": "object",
     "sources": [
       "components/proprietary_rf/esb/nrf_esb.c"
     ],
