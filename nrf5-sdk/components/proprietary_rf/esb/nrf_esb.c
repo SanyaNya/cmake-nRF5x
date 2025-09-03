@@ -44,7 +44,6 @@
 #include "nrf_gpio.h"
 #include <string.h>
 #include <stddef.h>
-#include "sdk_common.h"
 #include "sdk_macros.h"
 #include "app_util.h"
 #include "nrf_delay.h"

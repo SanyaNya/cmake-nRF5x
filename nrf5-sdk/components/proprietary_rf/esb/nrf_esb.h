@@ -42,6 +42,7 @@
 
 #include <stdbool.h>
 #include <stdint.h>
+#include "sdk_common.h"
 #include "nrf.h"
 #include "app_util.h"
 
