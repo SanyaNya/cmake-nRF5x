@@ -684,7 +684,11 @@ static void on_radio_disabled_tx()
     // and that it will disable the radio automatically if no packet is
     // received by the time defined in m_wait_for_ack_timeout_us
     NRF_ESB_SYS_TIMER->CC[0]    = m_wait_for_ack_timeout_us;
+#if NRF_ESB_FAST_RAMP_UP
+    NRF_ESB_SYS_TIMER->CC[1]    = m_config_local.retransmit_delay - 40;
+#else
     NRF_ESB_SYS_TIMER->CC[1]    = m_config_local.retransmit_delay - 130;
+#endif
     NRF_ESB_SYS_TIMER->TASKS_CLEAR = 1;
     NRF_ESB_SYS_TIMER->EVENTS_COMPARE[0] = 0;
     NRF_ESB_SYS_TIMER->EVENTS_COMPARE[1] = 0;
@@ -1030,6 +1034,10 @@ uint32_t nrf_esb_init(nrf_esb_config_t const * p_config)
     sys_timer_init();
 
     ppi_init();
+
+#if NRF_ESB_FAST_RAMP_UP
+    NRF_RADIO->MODECNF0 = (NRF_RADIO->MODECNF0 & ~RADIO_MODECNF0_RU_Pos) | RADIO_MODECNF0_RU_Fast << RADIO_MODECNF0_RU_Pos;
+#endif
 
     NVIC_SetPriority(RADIO_IRQn, m_config_local.radio_irq_priority & ESB_IRQ_PRIORITY_MSK);
     NVIC_SetPriority(ESB_EVT_IRQ, m_config_local.event_irq_priority & ESB_IRQ_PRIORITY_MSK);
