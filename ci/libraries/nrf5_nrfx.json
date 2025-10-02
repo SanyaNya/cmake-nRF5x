@@ -356,6 +356,25 @@
       ]
     }
   },
+  "nrf5_nrfx_spimx": {
+    "documentation": "SPIMX nrfx driver",
+    "variant": "object",
+    "sources": [
+      "modules/nrfx/drivers/src/nrfx_spimx.c"
+    ],
+    "dependencies": {
+      "public": [
+        "nrf5_log",
+        "nrf5_nrfx_common"
+      ]
+    },
+    "includes": {
+      "public": [
+        "components/libraries/util",
+        "modules/nrfx/drivers/include"
+      ]
+    }
+  },
   "nrf5_nrfx_spis": {
     "documentation": "SPIS nrfx driver",
     "variant": "object",
