@@ -1,0 +1,1 @@
+../../../../../external/nrfx_spimx/nrfx_spimx.h

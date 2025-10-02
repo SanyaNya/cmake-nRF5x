@@ -1,0 +1,3 @@
+[submodule "external/nrfx_spimx"]
+	path = external/nrfx_spimx
+	url = https://github.com/SanyaNya/nrfx_spimx
